@@ -81,4 +81,12 @@ function demoSubmit(e){
   e.preventDefault();
   alert((document.body.getAttribute('data-lang')==='ua') ? 'Ця демо-сторінка не надсилає файли. Налаштуйте Formspree/Netlify Forms або бекенд (PHP/Node) згідно README.' : 'This demo page does not upload files. Configure Formspree/Netlify Forms or a backend (PHP/Node) per README.');
   return false;
+  // speed: 1 = стандарт. Використай ?speed=1.5 у URL для пришвидшення
+(function(){
+  const params = new URLSearchParams(location.search);
+  const speed = parseFloat(params.get('speed')) || 1;
+  document.documentElement.style.setProperty('--spin-large', (28 / speed) + 's');
+  document.documentElement.style.setProperty('--spin-mid', (16 / speed) + 's');
+  document.documentElement.style.setProperty('--spin-small', (10 / speed) + 's');
+})();
 }
