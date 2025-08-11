@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Levcom</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-lang="en">
+  <header class="site-header">
+    <div class="brand">
+      <svg class="logo" width="160" height="48" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="100%" height="100%" fill="none"/>
+        <g fill="#9fbfff" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="60">
+          <text x="0" y="82">LEVCOM</text>
+        </g>
+      </svg>
+      <div class="brand-text">
+        <div class="company">Levcom</div>
+        <div class="tagline" data-key="tagline">Precision CNC Metal Machining</div>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html" data-key="nav_home">Home</a>
+      <a href="about.html" data-key="nav_about">About</a>
+      <a href="services.html" data-key="nav_services">Services</a>
+      <a href="portfolio.html" data-key="nav_portfolio">Portfolio</a>
+      <a href="contact.html" data-key="nav_contact">Contact</a>
+    </nav>
+
+    <div class="lang-switch">
+      <button id="btn-en" onclick="setLanguage('en')">EN</button>
+      <button id="btn-ua" onclick="setLanguage('ua')">UA</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h1 data-key="contact_title">Contact & Quote</h1>
+      <p data-key="contact_text">Upload your drawing (.STEP, .STP, .DXF, .DWG) and we will reply within 24 hours.</p>
+
+      <!-- Demo form: no server in this repo. See README for options (Formspree / Netlify forms / PHP). -->
+      <form onsubmit="return demoSubmit(event)" class="contact-form">
+        <input name="name" placeholder="Name / Ім'я" required>
+        <input name="email" type="email" placeholder="Email" required>
+        <input name="project" placeholder="Project / Part name" required>
+        <input name="file" type="file" accept=".step,.stp,.dxf,.dwg,.zip">
+        <textarea name="notes" placeholder="Notes (material, tolerance)"></textarea>
+        <button type="submit" data-key="contact_send">Send Request</button>
+      </form>
+
+      <div class="contact-info">
+        <p data-key="contact_phone">Phone: (to add)</p>
+        <p data-key="contact_email">Email: info@levcom.example (to update)</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Levcom — <span data-key="footer_copy">Precision CNC Metal Machining</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
